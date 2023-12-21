@@ -22,7 +22,12 @@ const MemoCode = () => {
       <div>
         render :{mainPageRender.current}
         Count: {count}
-        <button onClick={increment}>increment count</button>
+        <button
+          className="bg-red-300 p-2 rounded-lg shadow-lg border-4 hover:border-yellow-400"
+          onClick={increment}
+        >
+          increment count
+        </button>
       </div>
     </>
   );
