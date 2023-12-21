@@ -15,7 +15,7 @@ function App() {
       data-theme="light"
     >
       <div className="w-56">
-        <UseRefCode />
+        <MemoCode />
       </div>
     </div>
   );

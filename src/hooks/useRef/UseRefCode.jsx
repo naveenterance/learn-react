@@ -21,6 +21,7 @@ const UseRefCode = () => {
   return (
     <>
       <p>Render count: {renderCount.current}</p>
+
       <button onClick={() => setCount(count + 1)}>Trigger Re-render</button>
       <button onClick={handleClick}>Increment useRef object</button>
 
