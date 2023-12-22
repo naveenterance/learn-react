@@ -11,6 +11,11 @@ import UseCallbackCode from "./hooks/useCallback/UseCallbackCode";
 import UseMemoCode from "./hooks/useMemo/UseMemoCode";
 import UseContextCode from "./hooks/useContext/UseContextCode";
 import UseReducerCode from "./hooks/useReducer/UseReducerCode";
+import Events from "./events/Events";
+import ShadowDom from "./concepts/shadow-dom/ShadowDOm";
+import Reconciliation from "./concepts/reconciliation/Reconciliation";
+import PassToChild from "./concepts/props/PassToChild";
+import PassToParent from "./concepts/props/PassToParent";
 
 function App() {
   return (
@@ -19,7 +24,8 @@ function App() {
       data-theme="light"
     >
       <div className="w-56">
-        <UseReducerCode />
+        <PassToChild />
+        <PassToParent />
       </div>
     </div>
   );
