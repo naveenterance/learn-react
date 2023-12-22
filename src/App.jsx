@@ -7,6 +7,10 @@ import UseStateCode from "./hooks/useState/UseStateCode";
 import UseEffectCode from "./hooks/useEffect/UseEffectCode";
 import UseRefCode from "./hooks/useRef/UseRefCode";
 import MemoCode from "./components/memo/MemoCode";
+import UseCallbackCode from "./hooks/useCallback/UseCallbackCode";
+import UseMemoCode from "./hooks/useMemo/UseMemoCode";
+import UseContextCode from "./hooks/useContext/UseContextCode";
+import UseReducerCode from "./hooks/useReducer/UseReducerCode";
 
 function App() {
   return (
@@ -15,7 +19,7 @@ function App() {
       data-theme="light"
     >
       <div className="w-56">
-        <MemoCode />
+        <UseReducerCode />
       </div>
     </div>
   );

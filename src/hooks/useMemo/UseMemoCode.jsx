@@ -1,16 +1,26 @@
-// "referential equality".
-// Every time a component re-renders, its functions get recreated.
-// Because of this, the addTodo function has actually changed.
-// So use usecallback
+//The useEffect runs by default after every render of the component.
+//To fix this performance issue,
+// we can use the useMemo Hook to memoize the expensiveCalculation function.
+//This will cause the function to only run when needed.
 
-import { useEffect, useState, useRef, useCallback } from "react";
+import { useEffect, useState, useRef, useCallback, useMemo } from "react";
 import ReactDOM from "react-dom/client";
 import Todos from "./Todos";
 
-const UseCallbackCode = () => {
+const UseMemoCode = () => {
   const [count, setCount] = useState(0);
   const [todos, setTodos] = useState(["todo 1", "todo 2"]);
   const mainPageRender = useRef(0);
+
+  const expensiveCalculation = (num) => {
+    console.log("Calculating...");
+    for (let i = 0; i < 1000000000; i++) {
+      num += 1;
+    }
+    return num;
+  };
+
+  const calculation = useMemo(() => expensiveCalculation(count), [count]);
 
   const increment = () => {
     setCount((c) => c + 1);
@@ -37,8 +47,12 @@ const UseCallbackCode = () => {
         >
           increment count
         </button>
+        <div>
+          <h2>Expensive Calculation</h2>
+          {calculation}
+        </div>
       </div>
     </>
   );
 };
-export default UseCallbackCode;
+export default UseMemoCode;
