@@ -9,12 +9,18 @@ const Todos = ({ todos, addTodo }) => {
   });
   return (
     <>
-      <p>Todopage rerender: {todoPageRender.current}</p>
-      <h2>My Todos</h2>
+      <p className="h3">Todopage rerender: {todoPageRender.current}</p>
+      <p className="h3">My Todos</p>
       {todos.map((todo, index) => {
-        return <p key={index}>{todo}</p>;
+        return (
+          <p key={index} className="h3">
+            {todo}
+          </p>
+        );
       })}
-      <button onClick={addTodo}>Add Todo</button>
+      <button onClick={addTodo} className="btn">
+        Add Todo
+      </button>
     </>
   );
 };

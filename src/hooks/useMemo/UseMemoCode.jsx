@@ -39,18 +39,12 @@ const UseMemoCode = () => {
       <Todos todos={todos} addTodo={addTodo} />
       <hr />
       <div>
-        render :{mainPageRender.current}
-        Count: {count}
-        <button
-          className="bg-red-300 p-2 rounded-lg shadow-lg border-4 hover:border-yellow-400"
-          onClick={increment}
-        >
+        <p className="h3"> render :{mainPageRender.current}</p>
+        <p className="h3">Count: {count}</p>
+        <button className="btn" onClick={increment}>
           increment count
         </button>
-        <div>
-          <h2>Expensive Calculation</h2>
-          {calculation}
-        </div>
+        <div className="h3">Expensive Calculation: {calculation}</div>
       </div>
     </>
   );

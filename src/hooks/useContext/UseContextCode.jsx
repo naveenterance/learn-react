@@ -10,7 +10,7 @@ const UseContextCode = () => {
 
   return (
     <UserContext.Provider value={user}>
-      <h1>{`Hello ${user}!`}</h1>
+      <p className="h3">{`Hello ${user}!`}</p>
       <Component2 />
     </UserContext.Provider>
   );
@@ -19,7 +19,7 @@ const UseContextCode = () => {
 function Component2() {
   return (
     <>
-      <h1>Component 2</h1>
+      <p className="h3">Component 2</p>
       <Component3 />
     </>
   );
@@ -28,7 +28,7 @@ function Component2() {
 function Component3() {
   return (
     <>
-      <h1>Component 3</h1>
+      <p className="h3">Component 3</p>
       <Component4 />
     </>
   );
@@ -37,7 +37,7 @@ function Component3() {
 function Component4() {
   return (
     <>
-      <h1>Component 4</h1>
+      <p className="h3">Component 4</p>
       <Component5 />
     </>
   );
@@ -48,8 +48,8 @@ function Component5() {
 
   return (
     <>
-      <h1>Component 5</h1>
-      <h2>{`Hello ${user} again!`}</h2>
+      <p className="h3">Component 5</p>
+      <p className="h4">{`Hello ${user} again!`}</p>
     </>
   );
 }

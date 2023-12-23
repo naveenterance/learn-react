@@ -65,30 +65,33 @@ const UseReducerCode = () => {
 
   return (
     <div>
-      <h1>Todo List</h1>
+      <p className="h3">Todo List</p>
       <input
         type="text"
         value={newTodo}
         onChange={(e) => setNewTodo(e.target.value)}
         placeholder="Add a new todo"
       />
-      <button onClick={addTodo}>Add</button>
+      <button onClick={addTodo} className="btn">
+        Add
+      </button>
       <ul>
         {state.todos.map((todo) => (
-          <li key={todo.id}>
+          <li key={todo.id} className="h4  flex items-center justify-between">
             <input
               type="checkbox"
               checked={todo.completed}
               onChange={() => toggleTodo(todo.id)}
             />
             <span
-              style={{
-                textDecoration: todo.completed ? "line-through" : "none",
-              }}
+              className={` ${todo.completed ? "line-through" : "underline"}   `}
             >
               {todo.text}
             </span>
-            <button onClick={() => removeTodo(todo.id)}>Remove</button>
+
+            <button onClick={() => removeTodo(todo.id)} className="btn">
+              Remove
+            </button>
           </li>
         ))}
       </ul>

@@ -1,8 +1,13 @@
 import React, { useState } from "react";
+import "animate.css";
 
-const Sitemap = () => {
+const Sitemap = ({ isExpanded }) => {
   return (
-    <div>
+    <div
+      className={`rounded-lg fixed bottom-0 left-0 right-0 bg-slate-100 shadow-lg animate__animated${
+        isExpanded ? " animate__fadeInUp" : " animate__fadeOutDown "
+      }`}
+    >
       <figure>
         <ul class="tree">
           <li>

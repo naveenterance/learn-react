@@ -9,9 +9,18 @@ const UseStateCode = () => {
 
   return (
     <>
-      <button onClick={() => handleClick("First Button pressed")}>First</button>
-      <button>{data}</button>
-      <button onClick={() => handleClick("Second Button pressed")}>
+      <p className="h3">{data}</p>
+      <button
+        onClick={() => handleClick("First Button pressed")}
+        className="btn"
+      >
+        First
+      </button>
+
+      <button
+        onClick={() => handleClick("Second Button pressed")}
+        className="btn"
+      >
         Second
       </button>
     </>

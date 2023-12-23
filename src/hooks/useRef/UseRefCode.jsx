@@ -20,12 +20,16 @@ const UseRefCode = () => {
 
   return (
     <>
-      <p>Render count: {renderCount.current}</p>
+      <p className="h3">Render count: {renderCount.current}</p>
 
-      <button onClick={() => setCount(count + 1)}>Trigger Re-render</button>
-      <button onClick={handleClick}>Increment useRef object</button>
+      <button onClick={() => setCount(count + 1)} className="btn">
+        Trigger Re-render
+      </button>
+      <button onClick={handleClick} className="btn">
+        Increment useRef object
+      </button>
 
-      <p>useRef object count :{data.current}</p>
+      <p className="h3">useRef object count :{data.current}</p>
     </>
   );
 };

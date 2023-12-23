@@ -13,9 +13,18 @@ const UseEffectCode = () => {
 
   return (
     <>
-      <button onClick={() => handleClick("First Button pressed")}>First</button>
-      <button>{displaydata}</button>
-      <button onClick={() => handleClick("Second Button pressed")}>
+      <p className="h3">{displaydata}</p>
+      <button
+        onClick={() => handleClick("First Button pressed")}
+        className="btn"
+      >
+        First
+      </button>
+
+      <button
+        onClick={() => handleClick("Second Button pressed")}
+        className="btn"
+      >
         Second
       </button>
     </>
