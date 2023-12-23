@@ -8,7 +8,7 @@ const ListComponent = ({ items }) => {
   return (
     <ul>
       {items.map((item) => (
-        <li key={item.id}>{item.text}</li>
+        <li key={item.id}>#{item.text}</li>
       ))}
     </ul>
   );
@@ -31,10 +31,12 @@ const Reconciliation = () => {
   };
 
   return (
-    <div>
-      <h2>React Reconciliation Example</h2>
+    <div className="shadow-lg">
+      <div className="h3">---------Item list--------</div>
       <ListComponent items={items} />
-      <button onClick={handleUpdate}>Update List</button>
+      <button className="btn" onClick={handleUpdate}>
+        Update List
+      </button>
     </div>
   );
 };

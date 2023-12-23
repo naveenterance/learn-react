@@ -8,13 +8,13 @@ const Todos = ({ todos }) => {
     todoPageRender.current += 1;
   });
   return (
-    <>
-      <p>Todopage rerender: {todoPageRender.current}</p>
-      <h2>My Todos</h2>
+    <div className="bd">
+      <p className="h3">Todopage rerender: {todoPageRender.current}</p>
+      <p className="h4">My Todos</p>
       {todos.map((todo, index) => {
-        return <p key={index}>{todo}</p>;
+        return <p key={index}>#{todo}</p>;
       })}
-    </>
+    </div>
   );
 };
 

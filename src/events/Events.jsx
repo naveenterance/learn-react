@@ -90,26 +90,60 @@ const Events = () => {
 
   return (
     <>
-      <p>Value: {value}</p>
+      <p className="h3">Value: {value}</p>
 
       <div className="flex-col p-16">
-        <button onMouseOver={handleOnMouseOver}>onmouseover</button>
-        <button onMouseUp={handleOnMouseUp}>onmouseup</button>
-        <button onMouseOut={handleOnMouseOut}>onmouseout</button>
-        <button onMouseMove={handleOnMouseMove}>onmousemove</button>
-        <button onMouseDown={handleOnMouseDown}>Onmousedown</button>
-        <button onLoad={handleOnLoad}>onload</button>
-        <button onUnload={handleOnUnload}>onunload</button>
-        <button onBlur={handleOnBlur}>onblur</button>
-        <button onKeyDown={handleOnKeyDown}>Onkeydown</button>
-        <button onKeyUp={handleOnKeyUp}>Onkeyup</button>
-        <button onKeyPress={handleOnKeyPress}>Onkeypress</button>
-        <button onSelect={handleOnSelect}>Onselect</button>
-        <button onChange={handleOnChange}>OnChange</button>
-        <button onClick={handleOnClick}>OnClick</button>
-        <button onDoubleClick={handleOnDoubleClick}>OnDoubleClick</button>
-        <button onFocus={handleOnFocus}>OnFocus</button>
-        <button onSubmit={handleOnSubmit}>OnSubmit</button>
+        <button className="btn" onMouseOver={handleOnMouseOver}>
+          onmouseover
+        </button>
+        <button className="btn" onMouseUp={handleOnMouseUp}>
+          onmouseup
+        </button>
+        <button className="btn" onMouseOut={handleOnMouseOut}>
+          onmouseout
+        </button>
+        <button className="btn" onMouseMove={handleOnMouseMove}>
+          onmousemove
+        </button>
+        <button className="btn" onMouseDown={handleOnMouseDown}>
+          Onmousedown
+        </button>
+        <button className="btn" onLoad={handleOnLoad}>
+          onload
+        </button>
+        <button className="btn" onUnload={handleOnUnload}>
+          onunload
+        </button>
+        <button className="btn" onBlur={handleOnBlur}>
+          onblur
+        </button>
+        <button className="btn" onKeyDown={handleOnKeyDown}>
+          Onkeydown
+        </button>
+        <button className="btn" onKeyUp={handleOnKeyUp}>
+          Onkeyup
+        </button>
+        <button className="btn" onKeyPress={handleOnKeyPress}>
+          Onkeypress
+        </button>
+        <button className="btn" onSelect={handleOnSelect}>
+          Onselect
+        </button>
+        <button className="btn" onChange={handleOnChange}>
+          OnChange
+        </button>
+        <button className="btn" onClick={handleOnClick}>
+          OnClick
+        </button>
+        <button className="btn" onDoubleClick={handleOnDoubleClick}>
+          OnDoubleClick
+        </button>
+        <button className="btn" onFocus={handleOnFocus}>
+          OnFocus
+        </button>
+        <button className="btn" onSubmit={handleOnSubmit}>
+          OnSubmit
+        </button>
       </div>
     </>
   );

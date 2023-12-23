@@ -19,13 +19,10 @@ const MemoCode = () => {
     <>
       <Todos todos={todos} />
       <hr />
-      <div>
-        render :{mainPageRender.current}
-        Count: {count}
-        <button
-          className="bg-red-300 p-2 rounded-lg shadow-lg border-4 hover:border-yellow-400"
-          onClick={increment}
-        >
+      <div className="bd">
+        <p className="h3">render :{mainPageRender.current}</p>
+        <p className="h3">Count: {count}</p>
+        <button className="btn" onClick={increment}>
           increment count
         </button>
       </div>
