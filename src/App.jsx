@@ -16,22 +16,33 @@ import Events from "./events/Events";
 import ShadowDom from "./concepts/shadow-dom/ShadowDom";
 import Reconciliation from "./concepts/reconciliation/Reconciliation";
 import PropsCode from "./concepts/props/PropsCode";
+import ReactQuery from "./libraries/react-query/ReactQuery";
+import ReactRouter from "./libraries/react-router/ReactRouter";
 
 import Sitemap from "./Sitemap";
 
 function App() {
-  const [view, setView] = useState("UseMemoCode");
+  const [view, setView] = useState();
   const [isExpanded, setIsExpanded] = useState(true);
 
   const toggleSidebar = () => {
     setIsExpanded(!isExpanded);
   };
+  const receiveView = (data) => {
+    setView(data);
+  };
 
   return (
     <>
+      {!view && (
+        <img
+          className="h-32"
+          src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZXIxbWtya2liMWZ6Z3ZrbDB1djAyMXl6ZjVpd3ZrdjloM3dseTM2dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/hUL5gdlvDgtRbOElZS/giphy.gif"
+        />
+      )}
       <button
         onClick={toggleSidebar}
-        className="fixed bottom-4 right-4  p-2 rounded-full z-50 shadow-lg shadow-violet-900"
+        className="fixed bottom-4 left-4  p-2 rounded-full z-50 shadow-lg shadow-violet-900 bg-slate-200"
       >
         {isExpanded ? (
           <svg
@@ -40,7 +51,7 @@ function App() {
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
-            className="w-12 h-12"
+            className="w-12 h-12 text-red-400"
           >
             <path
               strokeLinecap="round"
@@ -55,7 +66,7 @@ function App() {
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
-            className="w-12 h-12"
+            className="w-12 h-12 text-green-600"
           >
             <path
               strokeLinecap="round"
@@ -65,47 +76,38 @@ function App() {
           </svg>
         )}
       </button>
-      <Sitemap isExpanded={isExpanded} />
+      <Sitemap isExpanded={isExpanded} receiveView={receiveView} />
       {view == "Props" && (
-        <div
-          className="w-screen h-screen justify-center items-center flex "
-          data-theme="light"
-        >
+        <div className="w-screen h-screen   ">
           <div class="grid grid-cols-2 mx-2 ">
-            <div className="mt-16">
+            <div className="mt-2 animate__animated animate__fadeInLeft -z-50">
               <img src="./Props.png" />
             </div>
-            <div className="m-auto">
+            <div className="mt-36 mr-2 animate__animated animate__fadeInRight -z-50">
               <PropsCode />
             </div>
           </div>
         </div>
       )}
       {view == "Reconciliation" && (
-        <div
-          className="w-screen h-screen justify-center items-center flex "
-          data-theme="light"
-        >
+        <div className="w-screen h-screen  " data-theme="light">
           <div class="grid grid-cols-2 mx-2 ">
-            <div className="mt-16">
+            <div className="mt-2 animate__animated animate__fadeInLeft -z-50">
               <img src="./Reconciliation.png" />
             </div>
-            <div className="m-auto">
+            <div className="mt-36 mr-2 animate__animated animate__fadeInRight -z-50">
               <Reconciliation />
             </div>
           </div>
         </div>
       )}
       {view == "ShadowDom" && (
-        <div
-          className="w-screen h-screen justify-center items-center flex "
-          data-theme="light"
-        >
+        <div className="w-screen h-screen " data-theme="light">
           <div class="grid grid-cols-2  mx-2 ">
-            <div className="mt-auto">
+            <div className="mt-2 animate__animated animate__fadeInLeft -z-50">
               <img src="./ShadowDom.png" />
             </div>
-            <div className="m-auto">
+            <div className="mt-36 mr-2 animate__animated animate__fadeInRight -z-50">
               <ShadowDom />
             </div>
           </div>
@@ -114,11 +116,11 @@ function App() {
       {view == "MemoCode" && (
         <div className="w-screen h-screen " data-theme="light">
           <div class="grid grid-cols-2  mx-2   ">
-            <div className="">
+            <div className="mt-2 animate__animated animate__fadeInLeft -z-50">
               <img src="./MemoCode.png" />
               <img src="./TodoMemo.png" />
             </div>
-            <div className="my-36">
+            <div className="mt-36 mr-2 animate__animated animate__fadeInRight -z-50">
               <MemoCode />
             </div>
           </div>
@@ -127,10 +129,10 @@ function App() {
       {view == "Events" && (
         <div className="w-screen h-screen " data-theme="light">
           <div class="grid grid-cols-2  mx-2   ">
-            <div className="">
+            <div className="mt-2 animate__animated animate__fadeInLeft -z-50">
               <img src="./Events.png" />
             </div>
-            <div className="my-36">
+            <div className="mt-36 mr-2 animate__animated animate__fadeInRight -z-50">
               <Events />
             </div>
           </div>
@@ -139,10 +141,10 @@ function App() {
       {view == "UseStateCode" && (
         <div className="w-screen h-screen " data-theme="light">
           <div class="grid grid-cols-2  mx-2   ">
-            <div className="">
+            <div className="mt-2 animate__animated animate__fadeInLeft -z-50">
               <img src="./UseStateCode.png" />
             </div>
-            <div className="my-36">
+            <div className="mt-36 mr-2 animate__animated animate__fadeInRight -z-50">
               <UseStateCode />
             </div>
           </div>
@@ -151,10 +153,10 @@ function App() {
       {view == "UseEffectCode" && (
         <div className="w-screen h-screen " data-theme="light">
           <div class="grid grid-cols-2  mx-2   ">
-            <div className="">
+            <div className="mt-2 animate__animated animate__fadeInLeft -z-50">
               <img src="./UseEffectCode.png" />
             </div>
-            <div className="my-36">
+            <div className="mt-36 mr-2 animate__animated animate__fadeInRight -z-50">
               <UseEffectCode />
             </div>
           </div>
@@ -163,10 +165,10 @@ function App() {
       {view == "UseRefCode" && (
         <div className="w-screen h-screen " data-theme="light">
           <div class="grid grid-cols-2  mx-2   ">
-            <div className="">
+            <div className="mt-2 animate__animated animate__fadeInLeft -z-50">
               <img src="./UseRefCode.png" />
             </div>
-            <div className="my-36">
+            <div className="mt-36 mr-2 animate__animated animate__fadeInRight -z-50">
               <UseRefCode />
             </div>
           </div>
@@ -175,10 +177,10 @@ function App() {
       {view == "UseContextCode" && (
         <div className="w-screen h-screen " data-theme="light">
           <div class="grid grid-cols-2  mx-2   ">
-            <div className="">
+            <div className="mt-2 animate__animated animate__fadeInLeft -z-50">
               <img src="./UseContextCode.png" />
             </div>
-            <div className="my-36">
+            <div className="mt-36 mr-2 animate__animated animate__fadeInRight -z-50">
               <UseContextCode />
             </div>
           </div>
@@ -187,11 +189,11 @@ function App() {
       {view == "UseMemoCode" && (
         <div className="w-screen h-screen " data-theme="light">
           <div class="grid grid-cols-2  mx-2   ">
-            <div className="">
+            <div className="mt-2 animate__animated animate__fadeInLeft -z-50">
               <img src="./UseMemoCode.png" />
               <img src="./TodoUseMemo.png" />
             </div>
-            <div className="my-36">
+            <div className="mt-36 mr-2 animate__animated animate__fadeInRight -z-50">
               <UseMemoCode />
             </div>
           </div>
@@ -200,11 +202,11 @@ function App() {
       {view == "UseCallbackCode" && (
         <div className="w-screen h-screen " data-theme="light">
           <div class="grid grid-cols-2  mx-2   ">
-            <div className="">
+            <div className="mt-2 animate__animated animate__fadeInLeft -z-50">
               <img src="./UseCallbackCode.png" />
               <img src="./TodoUseCallback.png" />
             </div>
-            <div className="my-36">
+            <div className="mt-36 mr-2 animate__animated animate__fadeInRight -z-50">
               <UseCallbackCode />
             </div>
           </div>
@@ -213,11 +215,35 @@ function App() {
       {view == "UseReducerCode" && (
         <div className="w-screen h-screen " data-theme="light">
           <div class="grid grid-cols-2  mx-2   ">
-            <div className="">
+            <div className="mt-2 animate__animated animate__fadeInLeft -z-50">
               <img src="./UseReducerCode.png" />
             </div>
-            <div className="my-36">
+            <div className="mt-36 mr-2 animate__animated animate__fadeInRight -z-50">
               <UseReducerCode />
+            </div>
+          </div>
+        </div>
+      )}
+      {view == "ReactQuery" && (
+        <div className="w-screen h-screen " data-theme="light">
+          <div class="grid grid-cols-2  mx-2   ">
+            <div className="mt-2 animate__animated animate__fadeInLeft -z-50">
+              <img src="./ReactQuery.png" />
+            </div>
+            <div className="mt-36 mr-2 animate__animated animate__fadeInRight -z-50">
+              <ReactQuery />
+            </div>
+          </div>
+        </div>
+      )}
+      {view == "ReactRouter" && (
+        <div className="w-screen h-screen " data-theme="light">
+          <div class="grid grid-cols-2  mx-2   ">
+            <div className="mt-2 animate__animated animate__fadeInLeft -z-50">
+              <img src="./ReactRouter.png" />
+            </div>
+            <div className="mt-36 mr-2 animate__animated animate__fadeInRight -z-50">
+              <ReactRouter />
             </div>
           </div>
         </div>
