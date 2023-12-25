@@ -83,7 +83,11 @@ function App() {
             <div className="mt-2 animate__animated animate__fadeInLeft -z-50">
               <img src="./Props.png" />
             </div>
-            <div className="mt-36 mr-2 animate__animated animate__fadeInRight -z-50">
+            <div
+              className={`mt-36 mr-2 animate__animated animate__fadeInRight ${
+                isExpanded ? "-z-50" : ""
+              }`}
+            >
               <PropsCode />
             </div>
           </div>
@@ -95,7 +99,11 @@ function App() {
             <div className="mt-2 animate__animated animate__fadeInLeft -z-50">
               <img src="./Reconciliation.png" />
             </div>
-            <div className="mt-36 mr-2 animate__animated animate__fadeInRight -z-50">
+            <div
+              className={`mt-36 mr-2 animate__animated animate__fadeInRight ${
+                isExpanded ? "-z-50" : ""
+              }`}
+            >
               <Reconciliation />
             </div>
           </div>
@@ -107,7 +115,11 @@ function App() {
             <div className="mt-2 animate__animated animate__fadeInLeft -z-50">
               <img src="./ShadowDom.png" />
             </div>
-            <div className="mt-36 mr-2 animate__animated animate__fadeInRight -z-50">
+            <div
+              className={`mt-36 mr-2 animate__animated animate__fadeInRight ${
+                isExpanded ? "-z-50" : ""
+              }`}
+            >
               <ShadowDom />
             </div>
           </div>
@@ -120,7 +132,11 @@ function App() {
               <img src="./MemoCode.png" />
               <img src="./TodoMemo.png" />
             </div>
-            <div className="mt-36 mr-2 animate__animated animate__fadeInRight -z-50">
+            <div
+              className={`mt-36 mr-2 animate__animated animate__fadeInRight ${
+                isExpanded ? "-z-50" : ""
+              }`}
+            >
               <MemoCode />
             </div>
           </div>
@@ -132,7 +148,11 @@ function App() {
             <div className="mt-2 animate__animated animate__fadeInLeft -z-50">
               <img src="./Events.png" />
             </div>
-            <div className="mt-36 mr-2 animate__animated animate__fadeInRight -z-50">
+            <div
+              className={`mt-36 mr-2 animate__animated animate__fadeInRight ${
+                isExpanded ? "-z-50" : ""
+              }`}
+            >
               <Events />
             </div>
           </div>
@@ -144,7 +164,11 @@ function App() {
             <div className="mt-2 animate__animated animate__fadeInLeft -z-50">
               <img src="./UseStateCode.png" />
             </div>
-            <div className="mt-36 mr-2 animate__animated animate__fadeInRight -z-50">
+            <div
+              className={`mt-36 mr-2 animate__animated animate__fadeInRight ${
+                isExpanded ? "-z-50" : ""
+              }`}
+            >
               <UseStateCode />
             </div>
           </div>
@@ -156,7 +180,11 @@ function App() {
             <div className="mt-2 animate__animated animate__fadeInLeft -z-50">
               <img src="./UseEffectCode.png" />
             </div>
-            <div className="mt-36 mr-2 animate__animated animate__fadeInRight -z-50">
+            <div
+              className={`mt-36 mr-2 animate__animated animate__fadeInRight ${
+                isExpanded ? "-z-50" : ""
+              }`}
+            >
               <UseEffectCode />
             </div>
           </div>
@@ -168,7 +196,11 @@ function App() {
             <div className="mt-2 animate__animated animate__fadeInLeft -z-50">
               <img src="./UseRefCode.png" />
             </div>
-            <div className="mt-36 mr-2 animate__animated animate__fadeInRight -z-50">
+            <div
+              className={`mt-36 mr-2 animate__animated animate__fadeInRight ${
+                isExpanded ? "-z-50" : ""
+              }`}
+            >
               <UseRefCode />
             </div>
           </div>
@@ -180,7 +212,11 @@ function App() {
             <div className="mt-2 animate__animated animate__fadeInLeft -z-50">
               <img src="./UseContextCode.png" />
             </div>
-            <div className="mt-36 mr-2 animate__animated animate__fadeInRight -z-50">
+            <div
+              className={`mt-36 mr-2 animate__animated animate__fadeInRight ${
+                isExpanded ? "-z-50" : ""
+              }`}
+            >
               <UseContextCode />
             </div>
           </div>
@@ -193,7 +229,11 @@ function App() {
               <img src="./UseMemoCode.png" />
               <img src="./TodoUseMemo.png" />
             </div>
-            <div className="mt-36 mr-2 animate__animated animate__fadeInRight -z-50">
+            <div
+              className={`mt-36 mr-2 animate__animated animate__fadeInRight ${
+                isExpanded ? "-z-50" : ""
+              }`}
+            >
               <UseMemoCode />
             </div>
           </div>
@@ -206,7 +246,11 @@ function App() {
               <img src="./UseCallbackCode.png" />
               <img src="./TodoUseCallback.png" />
             </div>
-            <div className="mt-36 mr-2 animate__animated animate__fadeInRight -z-50">
+            <div
+              className={`mt-36 mr-2 animate__animated animate__fadeInRight ${
+                isExpanded ? "-z-50" : ""
+              }`}
+            >
               <UseCallbackCode />
             </div>
           </div>
@@ -218,7 +262,11 @@ function App() {
             <div className="mt-2 animate__animated animate__fadeInLeft -z-50">
               <img src="./UseReducerCode.png" />
             </div>
-            <div className="mt-36 mr-2 animate__animated animate__fadeInRight -z-50">
+            <div
+              className={`mt-36 mr-2 animate__animated animate__fadeInRight ${
+                isExpanded ? "-z-50" : ""
+              }`}
+            >
               <UseReducerCode />
             </div>
           </div>
@@ -230,7 +278,11 @@ function App() {
             <div className="mt-2 animate__animated animate__fadeInLeft -z-50">
               <img src="./ReactQuery.png" />
             </div>
-            <div className="mt-36 mr-2 animate__animated animate__fadeInRight -z-50">
+            <div
+              className={`mt-36 mr-2 animate__animated animate__fadeInRight ${
+                isExpanded ? "-z-50" : ""
+              }`}
+            >
               <ReactQuery />
             </div>
           </div>
@@ -242,7 +294,11 @@ function App() {
             <div className="mt-2 animate__animated animate__fadeInLeft -z-50">
               <img src="./ReactRouter.png" />
             </div>
-            <div className="mt-36 mr-2 animate__animated animate__fadeInRight -z-50">
+            <div
+              className={`mt-36 mr-2 animate__animated animate__fadeInRight ${
+                isExpanded ? "-z-50" : ""
+              }`}
+            >
               <ReactRouter />
             </div>
           </div>
